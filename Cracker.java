@@ -193,7 +193,7 @@ public class Cracker
 		String result = "";
 		for(i = 0; i < s.length(); i++)
 		{
-			result = result + (char)((int)key.charAt(0) - (int)s.charAt(i) + 65);
+			result = result + (char)(((int)key.charAt(i%(key.length())) - (int)s.charAt(i) + 26)%26 + 65);
 		}
 		System.out.println("-- Beaufort result for " + label + "\n" + s + "\nusing key " + key +  "--\n" + result + "\n");
 		return result;
