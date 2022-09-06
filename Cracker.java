@@ -199,7 +199,7 @@ public class Cracker
 		return result;
 	}
 
-	public static void vigniere(String s, String key, int keyOffset, int direction)
+	public static void vigenere(String s, String key, int keyOffset, int direction)
 	{
 		int i;
 		int dir = -1;
@@ -208,13 +208,14 @@ public class Cracker
 		{
 			dir = 1;
 		}
-		System.out.println("--vigniere " + s + " and " + key + " and direction " + direction + "--");
+		System.out.println("-- vigenere ciphertext: " + s + " and key: " + key + " using direction " + direction + " --");
 		for(i = 0; i < s.length(); i++)
 		{
-			charA = (int)s.charAt(i) - 64;
-			charB = (int)key.charAt((i+keyOffset)%key.length()) - 64;
-			System.out.print((char)((charA + dir*charB + 26)%26 + 64));
+			charA = (int)s.charAt(i) - 65;
+			charB = (int)key.charAt((i+keyOffset)%key.length()) - 65;
+			System.out.print((char)((charA + dir*charB + 26)%26 + 65));
 		}
+		System.out.println();
 	}
 
 	public static void substitution(String cipher, String subs)
