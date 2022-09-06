@@ -244,7 +244,7 @@ public class Cracker
 				r = r + c;
 			}
 		}
-		System.out.println("-- substition cipher using substitution list: " + in + " -> " + out + "\non " + label + ": " + cipher + ":\n\t" + r + "\n");
+		System.out.println("-- substitution cipher using substitution list: " + in + " -> " + out + "\non " + label + ": " + cipher + ":\n\t" + r + "\n");
 		return r;
 	}
 
